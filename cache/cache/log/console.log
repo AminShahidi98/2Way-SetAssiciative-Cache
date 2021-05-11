@@ -1,0 +1,779 @@
+# Design: Design cache already active.
+# 
+# DESIGN: Default Design Language: VERILOG
+# DESIGN: Default BDE Language: VERILOG
+# DESIGN: Flow Manager: Not Defined
+alog -dbg -sve  -work cache $dsn/src/Cache.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Unit top modules: Cache.
+# $root top modules: Cache.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+alog -dbg -sve  -work cache $dsn/src/Cache.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 Cache.v : (20, 21): Syntax error. Unexpected token: .. Expected tokens: '[' , ',' , ';'.
+# Info: VCP2876 Cache.v : (35, 1): Implicit net declaration, symbol HIT0 has not been declared in module Cache.
+# Info: VCP2876 Cache.v : (36, 1): Implicit net declaration, symbol HIT1 has not been declared in module Cache.
+# Info: VCP2876 Cache.v : (53, 1): Implicit net declaration, symbol read_a0 has not been declared in module Cache.
+# Warning: VCP2515 Cache.v : (20, 1): Undefined module: ad_a0 was used. Port connection rules will not be checked at such instantiations.
+# Compile failure 1 Errors 1 Warnings  Analysis time: 1[s].
+alog -dbg -sve  -work cache $dsn/src/Cache.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2876 Cache.v : (35, 1): Implicit net declaration, symbol HIT0 has not been declared in module Cache.
+# Info: VCP2876 Cache.v : (36, 1): Implicit net declaration, symbol HIT1 has not been declared in module Cache.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP5103 Cache.v : (35, 56): Undeclared identifier: Valid.
+# Error: VCP5103 Cache.v : (36, 56): Undeclared identifier: Valid.
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -dbg -sve  -work cache $dsn/src/Cache.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP5103 Cache.v : (36, 56): Undeclared identifier: Valid.
+# Error: VCP5103 Cache.v : (37, 56): Undeclared identifier: Valid.
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -dbg -sve  -work cache $dsn/src/Cache.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Cache.
+# $root top modules: Cache.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -dbg -sve  -work cache $dsn/src/Cache.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2545 Cache.v : (5, 21): Duplicate port identifier: dout1
+# Error: VCP2562 Cache.v : (5, 21): Redeclaration of port dout1.
+# Info: VCP2876 Cache.v : (70, 1): Implicit net declaration, symbol dout0 has not been declared in module Cache.
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -dbg -sve  -work cache $dsn/src/Cache.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Cache.
+# $root top modules: Cache.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -dbg -sve  -work cache $dsn/src/Cache.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Cache.
+# $root top modules: Cache.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module Cache found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Cache_tb.
+# $root top modules: Cache_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.2 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 1.9 [s]
+# SLP: Finished : 2.1 [s]
+# SLP: 0 primitives and 18 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 2.2 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5749 kB (elbread=1023 elab2=4635 kernel=90 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\cache\cache\src\wave.asdb
+#  11:00 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+run
+run
+endsim
+# KERNEL: stopped at time: 5292923270 ns
+#  Simulation has been stopped
+# Error: Accelerated Waveform: Simulation database is not connected. Initialize simulation or load simulation database by opening waveform file (AWC, ASDB).
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 18 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5749 kB (elbread=1023 elab2=4635 kernel=90 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\cache\cache\src\wave.asdb
+#  11:04 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+run
+endsim
+# KERNEL: stopped at time: 180391130 ns
+#  Simulation has been stopped
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 18 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5749 kB (elbread=1023 elab2=4635 kernel=90 sdf=0)
+#  11:04 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+# add wave -noreg {/Cache_tb/dout0}
+# add wave -noreg {/Cache_tb/dout1}
+# add wave -noreg {/Cache_tb/clk}
+# add wave -noreg {/Cache_tb/sel0}
+# add wave -noreg {/Cache_tb/sel1}
+# add wave -noreg {/Cache_tb/we}
+# add wave -noreg {/Cache_tb/addr_in}
+# add wave -noreg {/Cache_tb/HIT0}
+# add wave -noreg {/Cache_tb/HIT1}
+# add wave -noreg {/Cache_tb/addr_mem}
+# add wave -noreg {/Cache_tb/di0}
+# add wave -noreg {/Cache_tb/di1}
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/dout0' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/dout1' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/clk' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/sel0' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/sel1' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/we' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/addr_in' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/HIT0' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/HIT1' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/di0' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/di1' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+run
+endsim
+# KERNEL: stopped at time: 1269750760 ns
+#  Simulation has been stopped
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 18 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5749 kB (elbread=1023 elab2=4635 kernel=90 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\cache\cache\src\wave.asdb
+#  11:05 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/cache/cache/src/wave.asdb'.
+# add wave -noreg {/Cache_tb/dout0}
+# add wave -noreg {/Cache_tb/dout1}
+# add wave -noreg {/Cache_tb/clk}
+# add wave -noreg {/Cache_tb/sel0}
+# add wave -noreg {/Cache_tb/sel1}
+# add wave -noreg {/Cache_tb/we}
+# add wave -noreg {/Cache_tb/addr_in}
+# add wave -noreg {/Cache_tb/HIT0}
+# add wave -noreg {/Cache_tb/HIT1}
+# add wave -noreg {/Cache_tb/addr_mem}
+# add wave -noreg {/Cache_tb/di0}
+# add wave -noreg {/Cache_tb/di1}
+# 12 signal(s) traced.
+run
+endsim
+# KERNEL: stopped at time: 1461423670 ns
+#  Simulation has been stopped
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 18 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5749 kB (elbread=1023 elab2=4635 kernel=90 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\cache\cache\src\wave.asdb
+#  11:06 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/cache/cache/src/wave.asdb'.
+# add wave -noreg {/Cache_tb/dout0}
+# add wave -noreg {/Cache_tb/dout1}
+# add wave -noreg {/Cache_tb/clk}
+# add wave -noreg {/Cache_tb/sel0}
+# add wave -noreg {/Cache_tb/sel1}
+# add wave -noreg {/Cache_tb/we}
+# add wave -noreg {/Cache_tb/addr_in}
+# add wave -noreg {/Cache_tb/HIT0}
+# add wave -noreg {/Cache_tb/HIT1}
+# add wave -noreg {/Cache_tb/addr_mem}
+# add wave -noreg {/Cache_tb/di0}
+# add wave -noreg {/Cache_tb/di1}
+# 12 signal(s) traced.
+run
+endsim
+# KERNEL: stopped at time: 1154830080 ns
+#  Simulation has been stopped
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 18 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5749 kB (elbread=1023 elab2=4635 kernel=90 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\cache\cache\src\wave.asdb
+#  11:10 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/cache/cache/src/wave.asdb'.
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module Cache found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Cache_tb.
+# $root top modules: Cache_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+#  Simulation has been stopped
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 1.0 [s]
+# SLP: Finished : 1.0 [s]
+# SLP: 0 primitives and 18 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 1.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5749 kB (elbread=1023 elab2=4635 kernel=90 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\cache\cache\src\wave.asdb
+#  11:10 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/cache/cache/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/cache/cache/src/wave.asdb'.
+# add wave -noreg {/Cache_tb/dout0}
+# add wave -noreg {/Cache_tb/dout1}
+# add wave -noreg {/Cache_tb/clk}
+# add wave -noreg {/Cache_tb/sel0}
+# add wave -noreg {/Cache_tb/sel1}
+# add wave -noreg {/Cache_tb/we}
+# add wave -noreg {/Cache_tb/addr_in}
+# add wave -noreg {/Cache_tb/HIT0}
+# add wave -noreg {/Cache_tb/HIT1}
+# add wave -noreg {/Cache_tb/addr_mem}
+# add wave -noreg {/Cache_tb/di0}
+# add wave -noreg {/Cache_tb/di1}
+# 12 signal(s) traced.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+endsim
+#  Simulation has been stopped
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 18 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5749 kB (elbread=1023 elab2=4635 kernel=90 sdf=0)
+#  11:11 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+# add wave -noreg {/Cache_tb/dout0}
+# add wave -noreg {/Cache_tb/dout1}
+# add wave -noreg {/Cache_tb/clk}
+# add wave -noreg {/Cache_tb/sel0}
+# add wave -noreg {/Cache_tb/sel1}
+# add wave -noreg {/Cache_tb/we}
+# add wave -noreg {/Cache_tb/addr_in}
+# add wave -noreg {/Cache_tb/HIT0}
+# add wave -noreg {/Cache_tb/HIT1}
+# add wave -noreg {/Cache_tb/addr_mem}
+# add wave -noreg {/Cache_tb/di0}
+# add wave -noreg {/Cache_tb/di1}
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/dout0' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/dout1' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/clk' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/sel0' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/sel1' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/we' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/addr_in' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/HIT0' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/HIT1' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/di0' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+# KERNEL: Warning: Cannot trace SLP signal `/Cache_tb/di1' in standard Waveform module. Please use Accelerated Waveform Viewer instead.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+endsim
+#  Simulation has been stopped
+# Error: Accelerated Waveform: Simulation database is not connected. Initialize simulation or load simulation database by opening waveform file (AWC, ASDB).
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 18 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5749 kB (elbread=1023 elab2=4635 kernel=90 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\cache\cache\src\wave.asdb
+#  11:13 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/cache/cache/src/wave.asdb'.
+# add wave -noreg {/Cache_tb/dout0}
+# add wave -noreg {/Cache_tb/dout1}
+# add wave -noreg {/Cache_tb/clk}
+# add wave -noreg {/Cache_tb/sel0}
+# add wave -noreg {/Cache_tb/sel1}
+# add wave -noreg {/Cache_tb/we}
+# add wave -noreg {/Cache_tb/addr_in}
+# add wave -noreg {/Cache_tb/HIT0}
+# add wave -noreg {/Cache_tb/HIT1}
+# add wave -noreg {/Cache_tb/addr_mem}
+# add wave -noreg {/Cache_tb/di0}
+# add wave -noreg {/Cache_tb/di1}
+# 12 signal(s) traced.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+endsim
+#  Simulation has been stopped
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module Cache found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP5103 Cache_TB.v : (50, 19): Undeclared identifier: addr0.
+# Error: VCP5103 Cache_TB.v : (51, 19): Undeclared identifier: addr1.
+# Error: VCP5103 Cache_TB.v : (53, 20): Undeclared identifier: period.
+# Error: VCP5103 Cache_TB.v : (58, 19): Undeclared identifier: addr0.
+# Error: VCP5103 Cache_TB.v : (59, 19): Undeclared identifier: addr1.
+# Error: VCP5103 Cache_TB.v : (61, 20): Undeclared identifier: period.
+# Compile failure 6 Errors 0 Warnings  Analysis time: 0[s].
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module Cache found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Cache_tb.
+# $root top modules: Cache_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.5 [s]
+# SLP: Finished : 0.6 [s]
+# SLP: 0 primitives and 19 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.7 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5750 kB (elbread=1023 elab2=4636 kernel=90 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\cache\cache\src\wave.asdb
+#  11:41 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/cache/cache/src/wave.asdb'.
+# add wave -noreg {/Cache_tb/dout0}
+# add wave -noreg {/Cache_tb/dout1}
+# add wave -noreg {/Cache_tb/clk}
+# add wave -noreg {/Cache_tb/sel0}
+# add wave -noreg {/Cache_tb/sel1}
+# add wave -noreg {/Cache_tb/we}
+# add wave -noreg {/Cache_tb/addr_in}
+# add wave -noreg {/Cache_tb/HIT0}
+# add wave -noreg {/Cache_tb/HIT1}
+# add wave -noreg {/Cache_tb/addr_mem}
+# add wave -noreg {/Cache_tb/di0}
+# add wave -noreg {/Cache_tb/di1}
+# 12 signal(s) traced.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+endsim
+#  Simulation has been stopped
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2020 Cache_TB.v : (59, 10): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 Cache_TB.v : (59, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: '#' , ''' , '(' , ';' , '@' ... .
+# Info: VCP2113 Module Cache found in current working library.
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2020 Cache_TB.v : (59, 10): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 Cache_TB.v : (59, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: '#' , ''' , '(' , ';' , '@' ... .
+# Info: VCP2113 Module Cache found in current working library.
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 Cache_TB.v : (49, 17): Syntax error. Unexpected token: =. Expected tokens: ':' , '#' , '(' , ',' , ';' ... .
+# Info: VCP2113 Module Cache found in current working library.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 Cache_TB.v : (49, 17): Syntax error. Unexpected token: =. Expected tokens: ':' , '#' , '(' , ',' , ';' ... .
+# Info: VCP2113 Module Cache found in current working library.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 Cache_TB.v : (49, 17): Syntax error. Unexpected token: =. Expected tokens: ':' , '#' , '(' , ',' , ';' ... .
+# Info: VCP2113 Module Cache found in current working library.
+# Compile failure 1 Errors 0 Warnings  Analysis time: 0[s].
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2020 Cache_TB.v : (59, 10): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 Cache_TB.v : (59, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: '#' , ''' , '(' , ';' , '@' ... .
+# Info: VCP2113 Module Cache found in current working library.
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2020 Cache_TB.v : (58, 10): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 Cache_TB.v : (58, 10): Syntax error. Unexpected token: endmodule[_ENDMODULE]. Expected tokens: '#' , ''' , '(' , ';' , '@' ... .
+# Info: VCP2113 Module Cache found in current working library.
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module Cache found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Cache_tb.
+# $root top modules: Cache_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.5 [s]
+# SLP: Finished : 0.6 [s]
+# SLP: 0 primitives and 19 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.7 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5751 kB (elbread=1023 elab2=4637 kernel=90 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\cache\cache\src\wave.asdb
+#  11:52 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/cache/cache/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+endsim
+#  Simulation has been stopped
+# add wave -noreg {/Cache_tb/dout0}
+# add wave -noreg {/Cache_tb/dout1}
+# add wave -noreg {/Cache_tb/clk}
+# add wave -noreg {/Cache_tb/sel0}
+# add wave -noreg {/Cache_tb/sel1}
+# add wave -noreg {/Cache_tb/we}
+# add wave -noreg {/Cache_tb/addr_in}
+# add wave -noreg {/Cache_tb/HIT0}
+# add wave -noreg {/Cache_tb/HIT1}
+# add wave -noreg {/Cache_tb/addr_mem}
+# add wave -noreg {/Cache_tb/di0}
+# add wave -noreg {/Cache_tb/di1}
+# Warning: WAVEFORM: Object matching /Cache_tb/dout0 not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /Cache_tb/dout1 not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /Cache_tb/clk not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /Cache_tb/sel0 not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /Cache_tb/sel1 not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /Cache_tb/we not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /Cache_tb/addr_in not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /Cache_tb/HIT0 not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /Cache_tb/HIT1 not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /Cache_tb/addr_mem not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /Cache_tb/di0 not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Warning: WAVEFORM: Object matching /Cache_tb/di1 not found in c:/My_Designs/cache/cache/src/wave.asdb.
+# Error: Accelerated Waveform: Simulation database is not connected. Initialize simulation or load simulation database by opening waveform file (AWC, ASDB).
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 19 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5751 kB (elbread=1023 elab2=4637 kernel=90 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\cache\cache\src\wave.asdb
+#  11:52 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/cache/cache/src/wave.asdb'.
+# add wave -noreg {/Cache_tb/dout0}
+# add wave -noreg {/Cache_tb/dout1}
+# add wave -noreg {/Cache_tb/clk}
+# add wave -noreg {/Cache_tb/sel0}
+# add wave -noreg {/Cache_tb/sel1}
+# add wave -noreg {/Cache_tb/we}
+# add wave -noreg {/Cache_tb/addr_in}
+# add wave -noreg {/Cache_tb/HIT0}
+# add wave -noreg {/Cache_tb/HIT1}
+# add wave -noreg {/Cache_tb/addr_mem}
+# add wave -noreg {/Cache_tb/di0}
+# add wave -noreg {/Cache_tb/di1}
+# 12 signal(s) traced.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+alog -dbg -sve  -work cache $dsn/src/TestBench/Cache_TB.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module Cache found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: Cache_tb.
+# $root top modules: Cache_tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+endsim
+#  Simulation has been stopped
+asim -O5 +access +w_nets +accb +accr +access +r +access +r+w Cache_tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.5 [s]
+# SLP: Finished : 0.6 [s]
+# SLP: 0 primitives and 19 (100.00%) other processes in SLP
+# SLP: 0 signals in SLP and 35 (94.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5752 kB (elbread=1023 elab2=4638 kernel=90 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\cache\cache\src\wave.asdb
+#  11:59 PM, Monday, May 10, 2021
+#  Simulation has been initialized
+#  Selected Top-Level: Cache_tb (Cache_tb)
+# Waveform file 'untitled.awc' connected to 'c:/My_Designs/cache/cache/src/wave.asdb'.
+# add wave -noreg {/Cache_tb/dout0}
+# add wave -noreg {/Cache_tb/dout1}
+# add wave -noreg {/Cache_tb/clk}
+# add wave -noreg {/Cache_tb/sel0}
+# add wave -noreg {/Cache_tb/sel1}
+# add wave -noreg {/Cache_tb/we}
+# add wave -noreg {/Cache_tb/addr_in}
+# add wave -noreg {/Cache_tb/HIT0}
+# add wave -noreg {/Cache_tb/HIT1}
+# add wave -noreg {/Cache_tb/addr_mem}
+# add wave -noreg {/Cache_tb/di0}
+# add wave -noreg {/Cache_tb/di1}
+# 12 signal(s) traced.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+# Adding file c:\My_Designs\cache\cache\src\untitled.asdb ... Done
+# Adding file c:\My_Designs\cache\cache\src\untitled.awc ... Done
+#  Simulation has been stopped

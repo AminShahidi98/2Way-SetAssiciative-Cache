@@ -1,0 +1,60 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+
+[Configurations]
+compile=cache
+
+[Library]
+cache=.\cache\cache.lib
+
+[Settings]
+AccessRead=1
+AccessReadWrite=1
+AccessACCB=1
+AccessACCR=1
+AccessReadWriteSLP=1
+AccessReadTopLevel=0
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VERILOG
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=C:\Users\techno\Desktop\src_cache
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=1
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+cache=.
+Active_lib=
+
+[Groups]
+TestBench=1
+
+[Files]
+/Cache.v=-1
+/untitled.asdb=-1
+/untitled.awc=-1
+TestBench/Cache_TB.v=-1
+TestBench/Cache_TB_runtest.do=-1
+
+[Files.Data]
+.\src\Cache.v=Verilog Source Code
+.\src\untitled.asdb=Accelerated Waveform File
+.\src\untitled.awc=Accelerated Waveform Configuration
+.\src\TestBench\Cache_TB.v=Verilog Test Bench
+.\src\TestBench\Cache_TB_runtest.do=Macro
+
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

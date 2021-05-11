@@ -1,0 +1,1 @@
+ -u "D:\programs\vhdl\bin/systf.dll" -v2k5  "c:\My_Designs\cache\cache\src\TestBench\Cache_TB.v"  -cs  -g 5  -r -li "c:\My_Designs\cache\cache\compile\cache.epr" -p "c:\My_Designs\cache\cache\cache" 
